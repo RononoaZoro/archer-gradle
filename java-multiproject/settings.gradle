@@ -1,0 +1,5 @@
+rootProject.name = 'java-multiproject'
+include 'shared'
+include 'api'
+include 'services'
+
