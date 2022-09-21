@@ -26,19 +26,22 @@ version '1.0-SNAPSHOT'
 ////通过 API 进行任务之间的通信 - 增加依赖
 //task0.dependsOn task2, task3
 
+// gradle tasks 列举 task
 // 等价于默认任务
-//task hi {
-//    println 'Hello Earth'
-//}
+task hi {
+    doLast {
+        println 'Hello Earth'
+    }
+}
 //hi.doFirst {
 //    println 'Hello Venus'
 //}
 //hi.doLast {
 //    println 'Hello Mars'
 //}
-//hi {
-//    println 'Hello Jupiter'
-//}
+hi {
+    println 'Hello Jupiter'
+}
 //
 //hello.doLast {
 //    println "Greetings from the $hello.name task."
@@ -61,20 +64,20 @@ version '1.0-SNAPSHOT'
 //    }
 //}
 
-task distribution {
-    doLast {
-        println "We build the zip with version=$version"
-    }
-}
-task release(dependsOn: 'distribution') {
-    doLast {
-        println 'We release now'
-    }
-}
-gradle.taskGraph.whenReady {taskGraph ->
-    if (taskGraph.hasTask(release)) {
-        version = '1.0'
-    } else {
-        version = '1.0-SNAPSHOT'
-    }
-}
+//task distribution {
+//    doLast {
+//        println "We build the zip with version=$version"
+//    }
+//}
+//task release(dependsOn: 'distribution') {
+//    doLast {
+//        println 'We release now'
+//    }
+//}
+//gradle.taskGraph.whenReady {taskGraph ->
+//    if (taskGraph.hasTask(release)) {
+//        version = '1.0'
+//    } else {
+//        version = '1.0-SNAPSHOT'
+//    }
+//}
