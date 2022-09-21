@@ -1,0 +1,23 @@
+group 'com.luo'
+version '1.0-SNAPSHOT'
+
+//task upper {
+//    String someString = 'mY_nAmE'
+//    println "Original: " + someString
+//    println "Upper case: " + someString.toUpperCase()
+//}
+//
+//// 采用 groovy
+//task count {
+//    4.times { print "$it " }
+//}
+//
+// 在两个任务之间指明依赖关系
+task hello {
+    println 'Hello world!'
+}
+//task intro(dependsOn: hello) {
+//    println "I'm Gradle"
+//}
+
+
