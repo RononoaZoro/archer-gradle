@@ -28,20 +28,20 @@ version '1.0-SNAPSHOT'
 
 // gradle tasks 列举 task
 // 等价于默认任务
-task hi {
-    doLast {
-        println 'Hello Earth'
-    }
-}
+//task hi {
+//    doLast {
+//        println 'Hello Earth'
+//    }
+//}
 //hi.doFirst {
 //    println 'Hello Venus'
 //}
 //hi.doLast {
 //    println 'Hello Mars'
 //}
-hi {
-    println 'Hello Jupiter'
-}
+//hi {
+//    println 'Hello Jupiter'
+//}
 //
 //hello.doLast {
 //    println "Greetings from the $hello.name task."
@@ -81,3 +81,85 @@ hi {
 //        version = '1.0-SNAPSHOT'
 //    }
 //}
+
+//task compile {
+//    doLast {
+//        println 'compiling source'
+//    }
+//}
+//task compileTest(dependsOn: compile) {
+//    doLast {
+//        println 'compiling unit tests'
+//    }
+//}
+//task test(dependsOn: [compile, compileTest]) {
+//    doLast {
+//        println 'running unit tests'
+//    }
+//}
+//task dist(dependsOn: [compile, test]) {
+//    doLast {
+//        println 'building the distribution'
+//    }
+//}
+
+
+//task hello {
+//    doLast {
+//        println "using build file '$buildFile.name' in '$buildFile.parentFile.name'."
+//    }
+//}
+
+//println name
+//println project.name
+//
+//task printProps {
+//    doLast{
+//        println commandLineProjectProp
+//        println gradlePropertiesProp
+//        println systemProjectProp
+//        println envProjectProp
+//        println System.properties['system']
+//    }
+//}
+
+//task(hello) {
+//    doLast {
+//        println "hello"
+//        println  buildDir
+//        println  file('srcDir')
+//    }
+//}
+//task(copy, type: Copy) {
+//    from(file('srcDir'))
+//    into(buildDir)
+//}
+
+//定义任务 — — 使用字符串作为任务名称
+//task('hello') {
+//    doLast {
+//        println "hello"
+//    }
+//}
+//task('copy', type: Copy) {
+//    from(file('srcDir'))
+//    into(buildDir)
+//}
+
+//tasks.create(name: 'hello') {
+//    doLast {
+//        println "hello"
+//    }
+//}
+//tasks.create(name: 'copy', type: Copy) {
+//    from(file('srcDir'))
+//    into(buildDir)
+//}
+
+//task hello
+//println hello.name
+//println project.hello.name
+
+//task hello
+//println tasks.hello.name
+//println tasks['hello'].name

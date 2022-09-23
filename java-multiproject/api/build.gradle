@@ -1,17 +1,24 @@
+apply plugin: 'java'
 group 'com.luo'
 
 // 项目依赖
 dependencies {
-    compile project(':shared')
+    implementation project(':shared')
 }
+//
+//// 项目打包
+//task dist(type: Zip) {
+//    from 'src/dist'
+//    into('libs') {
+//        from configurations.runtime
+//    }
+//}
+//artifacts {
+//    archives dist
+//}
 
-// 项目打包
-task dist(type: Zip) {
-    from 'src/dist'
-    into('libs') {
-        from configurations.runtime
+task hi1 {
+    doLast {
+        println "i am api hi"
     }
-}
-artifacts {
-    archives dist
 }
